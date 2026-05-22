@@ -13,7 +13,9 @@ export class App implements OnInit{
 
   async ngOnInit() {
     try {
-      const response = await fetch('/api/notes');
+      const response = await fetch(
+        'https://day1-fullstack.day1-fullstack.workers.dev/api/notes'
+      );
 
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
